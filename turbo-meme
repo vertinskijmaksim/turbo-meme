@@ -1,0 +1,23 @@
+                        .offset(
+                            x: geometry[$0].minX,
+                            y: geometry[$0].minY
+                        )
+                }
+            }
+        }
+    }
+}
+
+struct ExampleView2: View {
+    
+class AdvancedCombineViewModel: ObservableObject {
+    
+    @Published var data: [String] = []
+    @Published var error = ""
+    let dataService = AdvancedCombineDataService()
+    
+    var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        addSubscribers()
+    }
